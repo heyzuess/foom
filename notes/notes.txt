@@ -1,0 +1,24 @@
+[future]
+
+Unfinished / unverified
+- Item pickups are generated but haven't been seen in-game yet (the medikit was hidden in test screenshots).
+- Normal death frames (topple over) haven't been checked in-game; only the gib smear has.
+- Archvile heal frames ([ \ ]) rely on GZDoom mapping '^' to '\' in sprite names. Untested.
+- background = "remove" (rembg) path is untested.
+- Spectre shares the Demon sprite (SARG), so it can't have its own friend without a ZScript actor replacement.
+- Doom 1-only sprites (Commander Keen, Icon of Sin brain) aren't mapped.
+- Not a git repo yet. .gitignore already excludes friend photos and WADs.
+
+Ideas
+- First-person weapons: replace HUD gun sprites (PISG, SHTG, SHT2, CHGG, MISG, PLSG, BFGG, SAWG, PUNG)
+  with raise/fire/flash frames, e.g. a friend holding the gun or the gun swapped for a photo.
+- Projectiles: imp fireballs, rockets and plasma as tiny spinning faces.
+- Sounds: friends' voices for sight/pain/death/active lines (sounds/ + SNDINFO).
+- Obituaries and names: "Player was fragged by Sam" via LANGUAGE / actor Tag.
+- Title screen (TITLEPIC), intermission text, level names (MAPINFO), custom ENDOOM.
+- Barrels, decorations and corpses as friends.
+- Auto face crop using face detection so raw photos work without manual crop values.
+- Per-friend options: size multiplier, tint, fullbright, custom death style.
+- Multiple photos per friend (neutral / angry / hurt / laughing) mapped to walk / attack / pain / death.
+- Better test harness: scripted GZDoom screenshots per monster/item at fixed distance.
+- Multiplayer: each player gets their own friend's face via player skins (S_SKIN).

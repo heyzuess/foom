@@ -1,0 +1,31 @@
+# FOOM build config. Paths are relative to this file.
+iwad   = "iwads/freedoom2.wad"   # or your own DOOM2.WAD / DOOM.WAD
+output = "build/foom.pk3"
+
+scale      = 2        # photo resolution multiplier (1 = chunky 1993 pixels, 2-4 = sharper)
+background = "oval"   # "oval" cutout, "none" (keep rectangle), or "remove" (AI cutout, needs: pip install rembg)
+item_size  = 1.4      # how much bigger than the original pickup sprite a face should be
+
+# Monster -> photo. Use a plain path, or a table for per-photo options:
+#   Imp = { photo = "friends/sam.jpg", crop = [x, y, width, height], background = "none" }
+# Options: ZombieMan ShotgunGuy ChaingunGuy Imp Demon LostSoul Cacodemon HellKnight
+#   BaronOfHell Arachnotron PainElemental Revenant Mancubus Archvile SpiderMastermind
+#   Cyberdemon WolfensteinSS Player
+[monsters]
+ZombieMan  = "friends/examples/alex.jpg"
+ShotgunGuy = "friends/examples/sam.jpg"
+Imp        = "friends/examples/jordan.jpg"
+Cyberdemon = "friends/examples/taylor.jpg"
+
+# Pickups. Options: Stimpack Medikit HealthBonus ArmorBonus GreenArmor BlueArmor Soulsphere
+#   Megasphere Berserk Chainsaw Shotgun SuperShotgun Chaingun RocketLauncher PlasmaRifle
+#   BFG9000 Clip ClipBox Shell ShellBox RocketAmmo RocketBox Cell CellPack Backpack
+#   Invulnerability BlurSphere RadSuit Allmap Infrared
+[items]
+Medikit  = "friends/examples/sam.jpg"
+Stimpack = "friends/examples/alex.jpg"
+Shotgun  = "friends/examples/taylor.jpg"
+
+# Replace the Doomguy face in the status bar
+[hud]
+face = "friends/examples/jordan.jpg"
