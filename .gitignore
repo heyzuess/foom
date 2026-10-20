@@ -6,3 +6,5 @@ friends/*
 !friends/placeholders/
 gzdoom/
 __pycache__/
+.DS_Store
+foom.toml
