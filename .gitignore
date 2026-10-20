@@ -4,3 +4,5 @@ iwads/*.wad
 iwads/*.WAD
 friends/*
 !friends/placeholders/
+gzdoom/
+__pycache__/

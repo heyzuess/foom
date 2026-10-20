@@ -277,9 +277,9 @@ class Pk3:
                 z.writestr(path, data)
 
 
-def main():
-    cfg_path = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "foom.toml")
-    cfg = tomllib.loads(cfg_path.read_text())
+def main(config="foom.toml"):
+    """Build the pk3 described by config and return (pk3 path, iwad path)."""
+    cfg = tomllib.loads((ROOT / config).read_text())
     wad = Wad(ROOT / cfg["iwad"])
     scale = cfg.get("scale", 2)
     background = cfg.get("background", "oval")
@@ -321,7 +321,8 @@ def main():
     out = ROOT / cfg.get("output", "build/foom.pk3")
     pk3.write(out)
     print(f"Wrote {out.relative_to(ROOT)}")
+    return out, ROOT / cfg["iwad"]
 
 
 if __name__ == "__main__":
-    main()
+    main(*sys.argv[1:2])
