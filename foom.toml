@@ -6,26 +6,64 @@ scale      = 2        # photo resolution multiplier (1 = chunky 1993 pixels, 2-4
 background = "oval"   # "oval" cutout, "none" (keep rectangle), or "remove" (AI cutout, needs: pip install rembg)
 item_size  = 1.4      # how much bigger than the original pickup sprite a face should be
 
-# Monster -> photo. Use a plain path, or a table for per-photo options:
+# Everything below points at labelled placeholders (regenerate with make_placeholders.py).
+# Swap in real photos as you go. Use a plain path, or a table for per-photo options:
 #   Imp = { photo = "friends/sam.jpg", crop = [x, y, width, height], background = "none" }
-# Options: ZombieMan ShotgunGuy ChaingunGuy Imp Demon LostSoul Cacodemon HellKnight
-#   BaronOfHell Arachnotron PainElemental Revenant Mancubus Archvile SpiderMastermind
-#   Cyberdemon WolfensteinSS Player
-[monsters]
-ZombieMan  = "friends/examples/alex.jpg"
-ShotgunGuy = "friends/examples/sam.jpg"
-Imp        = "friends/examples/jordan.jpg"
-Cyberdemon = "friends/examples/taylor.jpg"
+# Delete a line to keep the original Doom sprite.
 
-# Pickups. Options: Stimpack Medikit HealthBonus ArmorBonus GreenArmor BlueArmor Soulsphere
-#   Megasphere Berserk Chainsaw Shotgun SuperShotgun Chaingun RocketLauncher PlasmaRifle
-#   BFG9000 Clip ClipBox Shell ShellBox RocketAmmo RocketBox Cell CellPack Backpack
-#   Invulnerability BlurSphere RadSuit Allmap Infrared
+[monsters]
+ZombieMan        = "friends/placeholders/ZombieMan.png"
+ShotgunGuy       = "friends/placeholders/ShotgunGuy.png"
+ChaingunGuy      = "friends/placeholders/ChaingunGuy.png"
+Imp              = "friends/placeholders/Imp.png"
+Demon            = "friends/placeholders/Demon.png"
+LostSoul         = "friends/placeholders/LostSoul.png"
+Cacodemon        = "friends/placeholders/Cacodemon.png"
+HellKnight       = "friends/placeholders/HellKnight.png"
+BaronOfHell      = "friends/placeholders/BaronOfHell.png"
+Arachnotron      = "friends/placeholders/Arachnotron.png"
+PainElemental    = "friends/placeholders/PainElemental.png"
+Revenant         = "friends/placeholders/Revenant.png"
+Mancubus         = "friends/placeholders/Mancubus.png"
+Archvile         = "friends/placeholders/Archvile.png"
+SpiderMastermind = "friends/placeholders/SpiderMastermind.png"
+Cyberdemon       = "friends/placeholders/Cyberdemon.png"
+WolfensteinSS    = "friends/placeholders/WolfensteinSS.png"
+Player           = "friends/placeholders/Player.png"
+
+# Pickups: health, armor, weapons, ammo, powerups
 [items]
-Medikit  = "friends/examples/sam.jpg"
-Stimpack = "friends/examples/alex.jpg"
-Shotgun  = "friends/examples/taylor.jpg"
+Stimpack         = "friends/placeholders/Stimpack.png"
+Medikit          = "friends/placeholders/Medikit.png"
+HealthBonus      = "friends/placeholders/HealthBonus.png"
+ArmorBonus       = "friends/placeholders/ArmorBonus.png"
+GreenArmor       = "friends/placeholders/GreenArmor.png"
+BlueArmor        = "friends/placeholders/BlueArmor.png"
+Soulsphere       = "friends/placeholders/Soulsphere.png"
+Megasphere       = "friends/placeholders/Megasphere.png"
+Berserk          = "friends/placeholders/Berserk.png"
+Chainsaw         = "friends/placeholders/Chainsaw.png"
+Shotgun          = "friends/placeholders/Shotgun.png"
+SuperShotgun     = "friends/placeholders/SuperShotgun.png"
+Chaingun         = "friends/placeholders/Chaingun.png"
+RocketLauncher   = "friends/placeholders/RocketLauncher.png"
+PlasmaRifle      = "friends/placeholders/PlasmaRifle.png"
+BFG9000          = "friends/placeholders/BFG9000.png"
+Clip             = "friends/placeholders/Clip.png"
+ClipBox          = "friends/placeholders/ClipBox.png"
+Shell            = "friends/placeholders/Shell.png"
+ShellBox         = "friends/placeholders/ShellBox.png"
+RocketAmmo       = "friends/placeholders/RocketAmmo.png"
+RocketBox        = "friends/placeholders/RocketBox.png"
+Cell             = "friends/placeholders/Cell.png"
+CellPack         = "friends/placeholders/CellPack.png"
+Backpack         = "friends/placeholders/Backpack.png"
+Invulnerability  = "friends/placeholders/Invulnerability.png"
+BlurSphere       = "friends/placeholders/BlurSphere.png"
+RadSuit          = "friends/placeholders/RadSuit.png"
+Allmap           = "friends/placeholders/Allmap.png"
+Infrared         = "friends/placeholders/Infrared.png"
 
 # Replace the Doomguy face in the status bar
 [hud]
-face = "friends/examples/jordan.jpg"
+face = "friends/placeholders/HudFace.png"

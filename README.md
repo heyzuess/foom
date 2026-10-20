@@ -35,7 +35,10 @@ Doom, drop `DOOM2.WAD` or `DOOM.WAD` into `iwads/` and point `iwad` in
    ```
 3. `./play.sh` rebuilds and launches. Use `./play.sh -warp 1` to jump straight to MAP01.
 
-`foom.toml` lists every monster and item name you can use.
+`foom.toml` starts out mapping every monster and item to a labelled placeholder
+in `friends/placeholders/`, so you can tell in-game which sprite is which. Replace
+them one at a time with real photos. Run `.venv/bin/python make_placeholders.py`
+to regenerate them.
 
 ### Background options
 - `oval` (default): a soft oval cutout, the classic "face on a stick" look.

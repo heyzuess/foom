@@ -3,4 +3,4 @@ build/
 iwads/*.wad
 iwads/*.WAD
 friends/*
-!friends/examples/
+!friends/placeholders/
